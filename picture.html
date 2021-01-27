@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>HTML Tips - The Picture element</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+
+    <style></style>
+  </head>
+  <body>
+    <h2><a href="./index.html">Home</a></h2>
+    <!--Change the browser window width to see the image change.-->
+
+    <picture>
+      <source
+        srcset="
+          https://interactive-examples.mdn.mozilla.net/media/cc0-images/surfer-240-200.jpg
+        "
+        media="(min-width: 800px)"
+      />
+      <img
+        src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/painted-hand-298-332.jpg"
+        alt=""
+      />
+    </picture>
+  </body>
+</html>

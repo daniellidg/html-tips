@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>HTML Tips - The Output element</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+
+    <style>
+      .box {
+        border: 1px dotted;
+        border-radius: 5px;
+        padding: 10px;
+        width: 80%;
+        margin: 10px;
+      }
+    </style>
+    <script>
+      function showColor(event) {
+        let colorHex = event.target.value;
+        document.getElementById("colorme").style.color = colorHex;
+      }
+    </script>
+  </head>
+  <body>
+    <h2><a href="./index.html">Home</a></h2>
+
+    <div class="box">
+      <h2>Color Picker</h2>
+      <form>
+        <label for="username1">Colors:</label>
+        <input type="color" onchange="showColor(event)" />
+        <label id="colorme">Color me</label>
+      </form>
+    </div>
+    <div class="box">
+      <h2>Required</h2>
+      <form>
+        <label for="username1">Username:</label>
+        <input type="text" id="username1" name="Username" required />
+        <input type="submit" />
+      </form>
+    </div>
+    <div class="box">
+      <h2>Autofocus</h2>
+      <form>
+        <label for="username2">Username:</label>
+        <input type="text" id="username2" name="Username" required autofocus />
+        <input type="submit" />
+      </form>
+    </div>
+    <div class="box">
+      <h2>Placeholder</h2>
+      <form>
+        <label for="username3">Username:</label>
+        <input
+          type="text"
+          id="username3"
+          name="Username"
+          placeholder="username"
+        />
+        <input type="submit" />
+      </form>
+    </div>
+    <div class="box">
+      <h2>Email</h2>
+      <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required />
+        <input type="submit" />
+      </form>
+    </div>
+    <div class="box">
+      <h2>Regex(^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$)</h2>
+      <form>
+        <label for="email">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="6-20 chars, at least 1 digit, 1 uppercase and one lowercase letter"
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$"
+          required
+        />
+        <input type="submit" />
+      </form>
+    </div>
+  </body>
+</html>
